@@ -7,12 +7,12 @@ This repository contains a synthetic dataset of the human body pint cloud create
 
 # Sythentic Human Bodies Dataset Creation
 
-To create the Sythenthic Bodies Dataset we followed the work form Irene et al from "Temporal Interpolation of Dynamic Point Clouds using Convolutional Neural Networks" 
-In case of any doubt you will find a diferent code to achive the similar data creation at https://github.com/jelmr/pc_temporal_interpolation
+To create the Synthetic Bodies Dataset we followed the work from Irene et al in "Temporal Interpolation of Dynamic Point Clouds using Convolutional Neural Networks" 
+In case of any doubt, you will find a different code to achive similar data creation at https://github.com/jelmr/pc_temporal_interpolation
 
 ### 1. Download the FBX files from Mixamo.
 
-### 2. We recomentd to organize the FBXs files with the following tree structure
+### 2. We recommend to organize the FBXs files with the following tree structure
 ```
 Datasets
 |-FBX
@@ -26,12 +26,12 @@ Datasets
   (...)
 ```
 
-### 3. To convert the Fbx file to point cloud run the following python:
-You will need to edit the script with to correct paths to the directories in your computer.
+### 3. To convert the FBX file to point cloud run the following Python:
+You will need to edit the script to correct paths to the directories in your computer.
 
     `python create_dataset_color_full_body.py`
 
-The python sctrip will  convert .FBX -> OBJ -> PLY. The final step the PLY are converted to NPY. For each point cloud there will a npy file for the points and npy file for the color.
+The Python script will  convert.FBX -> OBJ -> PLY. In the final step, the PLY are converted to NPY. For each point cloud, there will an npy file for the points and npy file for the color.
 
 After the script you should have:
 ```
@@ -64,14 +64,4 @@ Datasets
         |- frame_000002.npy
   ```
 
-
-### 4. Downsample the point clouds using the farthest point sampling algorithm from 800,000 points to 4,000 points or to 1,000 points.
-You will need to compile the code in the GraphRNN folder for this step.
-
-    `python /GraphRNN/Downsample_all_sequences.py`
-
-### 5. Set the correct path in GraphRNN files.
-
-For example in `train-GraphRNN_ShortTerm_color.py` you will need to change the following line to your personal directory with the npy files.
-`parser.add_argument('--data-dir', default='/home/uceepdg/profile.V6/Desktop/Datasets/NPYs_Bodys')`
 
