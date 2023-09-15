@@ -1,6 +1,3 @@
-#Overview
-This repository contains a synthetic dataset of the human body pint cloud created using the Mixamo online service
-
 ### Link to Dataset
 1. [Mixamo - Human Bodies](https://drive.google.com/drive/folders/14SRpLT0X7yQPKJV7YDiZXEGJVnw1SkHN?usp=sharing) &emsp;
 
