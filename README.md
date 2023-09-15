@@ -1,4 +1,3 @@
-
 #Overview
 This repository contains a synthetic dataset of the human body pint cloud created using the Mixamo online service
 
